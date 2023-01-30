@@ -5,9 +5,6 @@
   roles:
     - role: reset
       become: true
-    - role: raspberrypi
-      become: true
-      vars: {state: absent}
   post_tasks:
     - name: Reboot and wait for node to come back up
       become: true
