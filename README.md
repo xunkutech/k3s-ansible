@@ -221,6 +221,11 @@ cd monitoring
 kubectl apply -f kubelet/
 kubectl get ServiceMonitor -n monitoring
 
+# Install service monitor - ingress-nginx
+cd monitoring
+kubectl apply -f nginx/
+kubectl get ServiceMonitor -n monitoring
+
 # Install service monitor - longhorn-prometheus-servicemonitor
 cd monitoring
 kubectl apply -f longhorn-servicemonitor.yaml
